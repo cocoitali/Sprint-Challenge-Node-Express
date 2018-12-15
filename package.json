@@ -1,0 +1,27 @@
+{
+  "name": "Sprint-Challenge-Node-Express",
+  "version": "1.0.0",
+  "description": "## Assignments",
+  "main": "knexfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cocoitali/Sprint-Challenge-Node-Express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cocoitali/Sprint-Challenge-Node-Express/issues"
+  },
+  "homepage": "https://github.com/cocoitali/Sprint-Challenge-Node-Express#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "knex": "^0.16.2",
+    "nodemon": "^1.18.9",
+    "sqlite3": "^4.0.4"
+  }
+}
