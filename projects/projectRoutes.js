@@ -15,5 +15,23 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get("/:id", (req, res) => {
+  const { id } = req.params;
+  db
+    .get(id)
+    .then(projects => {
+      if (projects) {
+        res.json(projects);
+      } else {
+        res.status(404).json({ message: "project does not exist" });
+      }
+    })
+    .catch(err => {
+      res
+        .status(404)
+        .json({ error: "Information about the project could not be retrieved." });
+    });
+});
+
 
 module.exports = router
