@@ -53,6 +53,32 @@ router.post("/", (req, res) => {
     }
   });
 
+  router.put("/:id", (req, res) => {
+  const action = req.body;
+  const { id } = req.params;
+  if (action) {
+    db
+      .update(id, action)
+      .then(count => {
+        if (count) {
+          db.get(id).then(action => {
+            res.json(action);
+          });
+        } else {
+          res
+            .status(404)
+            .json({ message: "The action with the specified ID does not exist" });
+        }
+      })
+      .catch(err => {
+        res
+          .status(500)
+          .json({ error: "The action information could not be modifed." });
+      });
+  } else {
+    res.status(400).json({ errorMessage: "Please provide more info" });
+  }
+});
 
 
 module.exports = router
