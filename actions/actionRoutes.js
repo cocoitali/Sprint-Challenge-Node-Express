@@ -33,4 +33,26 @@ router.get('/:id', (req, res) => {
         })
 })
 
+router.post("/", (req, res) => {
+    const action = req.body;
+    if (action) {
+      db
+        .insert(action)
+        .then(idInfo => {
+         db.get(idInfo.id).then(action => {
+            res.status(201).json(action);
+          });
+        })
+        .catch(err => {
+          res.status(500).json({
+            error: "There was an error while saving action to the database"
+          });
+        });
+    } else {
+      res.status(400).json({ errorMessage: "Please provide more info" });
+    }
+  });
+
+
+
 module.exports = router
