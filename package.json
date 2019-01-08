@@ -12,15 +12,19 @@
     "url": "git+https://github.com/cocoitali/Sprint-Challenge-Node-Express.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Courtney Buratto <cmburatto@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/cocoitali/Sprint-Challenge-Node-Express/issues"
   },
   "homepage": "https://github.com/cocoitali/Sprint-Challenge-Node-Express#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
+    "helmet": "^3.15.0",
     "knex": "^0.16.2",
+    "morgan": "^1.9.1",
     "nodemon": "^1.18.9",
     "sqlite3": "^4.0.4"
   }

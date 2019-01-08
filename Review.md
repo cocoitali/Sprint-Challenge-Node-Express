@@ -3,7 +3,7 @@
 ## What is Node.js?
 A runtime environment that allows you to write javascript outside of the browser and works for both servers and desktop apps. For servers, Node.js uses a single-threaded loop to handle connections. Each connection allows a callback functions to handle requests, which requires less memory to handle more.
 ## What is Express?
-Express is to backend as React is to frontend. Itom the docs, Ex a framework (and essentially a Node.js module) that adds extra functionality to Node.js. Code more succint, lighter and flexible. "An Express application is essentially a series of middleware function calls." Straight from the docs.  
+Express is to backend as React is to frontend. Code more succint, lighter and flexible. "An Express application is essentially a series of middleware function calls." Straight from the docs.  
 ## Mention two parts of Express that you learned about this week.
 When you're writing Express, you're basically writing middleware and the rest is happening under the hood. Route handlers are middleware.
 
